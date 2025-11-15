@@ -1,12 +1,60 @@
 # Assignment 1
+## Glenn_TravelBooking.js
+## Reference
+[Trip.com](https://www.trip.com/)
 
-You will only need one file, ie, your node module, for this assignment.
+This Node.js module is based on **Trip.com** that manages travel experiences such as tours, attraction and tickets
+The purpose of this module os to simulate the **admin** side of the travel booking platform where there will be features such as:
 
-In this readme file, describe how to use your node module. It could be similar to **app.js** from Lab2, where you call some functions in your node module and display the output. Describe how to setup your node module, if any. Describe how to call the functions, what parameters required and so on.
+- Listing all avaliable experiences
+- Adding new travel experiences
+- Searching by country or city
+- Updating price
+- Deleting an experience
 
-You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live preview of the readme file.
+all data is store using simple Javascript arrays to simulate database.
 
-For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+## Functions
 
-# References
-Provide the references that you have used to support your assignment. 
+### **1.  listExperiences()**
+Returns the full list of travel experiences.
+
+### **2.   addExperience(name, country, category, location, description, price)**
+Adds a new travel experience and return a message confirming addition.
+
+### **3.  findByLocation(location)**
+Search experience by locations(city like tokyo, osaka).
+Return a filtered list or a message if nothing is found.
+   
+### **4.   findByCountry(country)**
+Search experience by countries(Japan, Singapore).
+Return a filtered list or a message if nothing is found.
+  
+### **5.    updateExPrice(name, newPrice)**
+Update price of selected experience.
+Return a success message or a error message.
+
+### **6.    deletExperience(name)**
+Remove an experience by name.
+Return a success message or a error message.
+  
+## How to use this Module
+
+### **Step 1: Install Node.js**
+Make sure Node.js is install on your computer
+You can check using:
+```bash
+node -v
+```
+
+### **Step 2: Clone this repository**
+You can clone using:
+```bash
+git clone https://github.com/Glennlzx/glenn_travelbooking.git
+```
+
+## References
+- Trip.com - https://www.trip.com/
+- Node.js Documentation – https://nodejs.org
+- NYP Web API Learning Materials (Brightspace)
+- Github Docs -  https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax

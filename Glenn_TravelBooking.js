@@ -1,9 +1,21 @@
 //dummy data for simulating database
 let experiences = [
-    { name: "Tokyo 8 Day Tour", country: "Japan", category: "Tour", location: "Tokyo", price: 4000 },
-    { name: "Osaka 7 Day Tour", country: "Japan", category: "Tour", location: "Osaka", price: 3000 },
-    { name: "Universal Studio Japan one day ticket + express full package", country: "Japan", category: "Attraction", location: "Osaka", price: 299 },
-    { name: "Universal Studio Singapore one day ticket + express full package", country: "Singapore", category: "Attraction", location: "Singapore", price: 200 },
+    {
+        name: "Tokyo 8 Day Tour", country: "Japan", category: "Tour", location: "Tokyo", description:
+            "Enjoy a 8 Day 7 night guided tour in tokyo and visit famous locations such as shibuya scramble crossing, tokyo tower and many more.", price: 4000
+    },
+    {
+        name: "Osaka 7 Day Tour", country: "Japan", category: "Tour", location: "Osaka", description:
+            "Enjoy a 7 Day 6 night guided tour in osaka and visit famous locations such as dotonbori, umeda and many more.", price: 3000
+    },
+    {
+        name: "Universal Studio Japan one day ticket + express full package", country: "Japan", category: "Attraction", location: "Osaka", description:
+            "Enjoy yourself in Universal Studio Japan filled with various attractions", price: 299
+    },
+    {
+        name: "Universal Studio Singapore one day ticket + express full package", country: "Singapore", category: "Attraction", location: "Singapore", description:
+            "Enjoy yourself in Universal Studio Singapore filled with various attractions", price: 200
+    },
 ]
 module.exports = {
     // List all experiences from the "database"
@@ -11,8 +23,8 @@ module.exports = {
         return experiences;
     },
     // Add new experience into the array (add)
-    addExperience(name, category, location, price) {
-        experiences.push({ name, category, location, price });
+    addExperience(name, country, category, location, description, price) {
+        experiences.push({ name, country, category, location, description, price });
         return `${name} has been added successfully`;
     },
     //Find experiences via location (filtering)
